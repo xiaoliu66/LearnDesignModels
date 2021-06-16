@@ -1,3 +1,4 @@
+import com.xiaoliu66.github.after.Builder;
 import com.xiaoliu66.github.before.DecorationPackageController;
 import org.junit.Test;
 
@@ -22,5 +23,19 @@ public class test_Controller {
 
         // 现代简约
         System.out.println(decoration.getMatterList(new BigDecimal("85.43"), 3));
+    }
+
+    @Test
+    public void test2() {
+        Builder builder = new Builder();
+
+        // 豪华欧式
+        System.out.println(builder.levelOne(132.52D).getDetails());
+
+        // 轻奢田园
+        System.out.println(builder.levelTwo(98.25D).getDetails());
+
+        // 现代简约
+        System.out.println(builder.levelThree(85.43D).getDetails());
     }
 }
